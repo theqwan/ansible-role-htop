@@ -1,0 +1,5 @@
+---
+# tasks file for install_htop
+
+- include_tasks: "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "CentOS"

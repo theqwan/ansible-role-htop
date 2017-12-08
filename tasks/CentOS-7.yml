@@ -1,0 +1,21 @@
+# install htop
+- name: install epel-release
+  yum:
+    name: epel-release
+    state: present
+    update_cache: yes
+
+- name: install htop
+  yum:
+    name: htop
+    state: present
+    update_cache: yes
+
+# check htop
+- name: check htop
+  stat:
+    path: /usr/bin/htop
+  register: check_htop
+
+- debug: msg="{{ ansible_hostname }} ({{ ansible_distribution }} {{ ansible_distribution_major_version }}) - install htop success !!"
+  when: check_htop.stat.exists == true
