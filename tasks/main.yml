@@ -1,5 +1,15 @@
 ---
-# tasks file for install_htop
 
-- include_tasks: "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+- name: install epel-release (CentOS)
+  yum:
+    name: epel-release
+    state: present
+    update_cache: yes
+  when: ansible_distribution == "CentOS"
+
+- name: install htop
+  package:
+    name: htop
+    state: present
+    update_cache: yes
   when: ansible_distribution == "Ubuntu" or ansible_distribution == "CentOS"
