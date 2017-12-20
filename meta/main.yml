@@ -23,9 +23,9 @@ galaxy_info:
   platforms:
   - name: Ubuntu
     versions:
-    - 16.04
-    - 14.04
-  - name: CentOS
+    - xenial
+    - trusty
+  - name: EL
     versions:
     - 7
     - 6
