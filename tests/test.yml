@@ -1,23 +1,6 @@
 ---
 
-- hosts: localhost
-  gather_facts: yes
-  become: yes
+- hosts: all
+
   roles:
-    - install_htop
-
-- hosts: localhost
-  gather_facts: yes
-  become: yes
-
-  tasks:
-    - name: check htop
-      stat:
-        path: /usr/bin/htop
-      register: check_htop
-
-    - debug: msg="{{ ansible_hostname }} ({{ ansible_distribution }} {{ ansible_distribution_major_version }}) - install htop success !!"
-      when: check_htop.stat.exists == true
-
-    - fail: msg="install htop fail"
-      when: check_htop.stat.exists == false
+    - role_under_test
