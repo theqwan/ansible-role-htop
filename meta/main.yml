@@ -2,9 +2,9 @@ galaxy_info:
   author: Cheng Wei Chen
   company: TheQwan
 
-  license: license (GPLv2, CC-BY, etc)
+  license: MIT
 
-  min_ansible_version: 2.4
+  min_ansible_version: 2.3
 
   # If this a Container Enabled role, provide the minimum Ansible Container version.
   # min_ansible_container_version:

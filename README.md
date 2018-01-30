@@ -10,7 +10,7 @@ install htop.
 Requirements
 ------------
 
-* ansible >= 2.4
+* ansible >= 2.3
 * python >= 2.6
 
 Role Variables
@@ -40,9 +40,4 @@ Example Playbook
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
